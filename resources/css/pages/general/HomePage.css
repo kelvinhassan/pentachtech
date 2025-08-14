@@ -1,0 +1,60 @@
+.HomePage {
+    .Hero {
+        @apply h-[85dvh] flex items-center justify-center bg-blue-50;
+
+        .container {
+            @apply grid grid-cols-1 lg:grid-cols-2 justify-between items-center gap-8;
+
+            .content {
+                @apply space-y-4;
+
+                h1 {
+                    @apply font-bold text-base text-blue-500;
+                }
+
+                p {
+                    @apply font-bold text-3xl;
+                }
+
+                .hero_actions {
+                    @apply mt-8;
+
+                    a {
+                        @apply bg-blue-500 text-white font-semibold tracking-wide py-[12px] px-[16px] rounded-lg;
+                    }
+                }
+
+                .social_proof {
+                    @apply flex justify-between mt-16;
+
+                    .stat {
+                        @apply grid;
+
+                        span {
+                            &:first-of-type {
+                                @apply font-bold text-2xl;
+                            }
+
+                            &:last-of-type {
+                                @apply text-sm;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .image {
+                @apply justify-self-center;
+
+                img {
+                    animation: spin 6s linear infinite;
+                }
+            }
+        }
+    }
+}
+
+@keyframes spin {
+  0%   { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
